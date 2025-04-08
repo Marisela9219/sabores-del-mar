@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Reserva | Sabores del Mar</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Sabores del Mar</h1>
+        <nav>
+            <ul>
+                <li><a href="index.php">Inicio</a></li>
+                <li><a href="menu.php">Menú</a></li>
+                <li><a href="galeria.php">Galería</a></li>
+                <li><a href="reserva.php">Reserva</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Realiza tu Reserva</h2>
+        <form action="" method="POST">
+            <label for="nombre">Nombre Completo:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="fecha">Fecha de Reserva:</label>
+            <input type="date" id="fecha" name="fecha" required>
+
+            <label for="hora">Hora de Reserva:</label>
+            <input type="time" id="hora" name="hora" required>
+
+            <label for="personas">Número de Personas:</label>
+            <input type="number" id="personas" name="personas" required min="1">
+
+            <label for="comentarios">Comentarios o Peticiones Especiales:</label>
+            <textarea id="comentarios" name="comentarios"></textarea>
+
+            <button type="submit">Realizar Reserva</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Sabores del Mar | El Salvador</p>
+    </footer>
+</body>
+</html>

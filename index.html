@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Sabores del Mar</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Sabores del Mar</h1>
+        <nav>
+            <ul>
+                <li><a href="index.php">Inicio</a></li>
+                <li><a href="menu.php">Menú</a></li>
+                <li><a href="galeria.php">Galería</a></li>
+                <li><a href="reserva.php">Reserva</a></li>
+            </ul>
+           </nav>
+    </header>
+
+    <main>
+       <div id="carrusel" class="carrusel">
+    <div class="carrusel-item">
+        <img src="img/imagen1.jpg" alt="Plato 1">
+    </div>
+    <div class="carrusel-item">
+        <img src="img/imagen2.jpg" alt="Plato 2">
+    </div>
+    <div class="carrusel-item">
+        <img src="img/imagen3.jpg" alt="Plato 3">
+    </div>
+</div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Sabores del Mar | El Salvador</p>
+    </footer>
+
+    <script>
+    let currentIndex = 0;
+    const items = document.querySelectorAll('.carrusel-item');
+    const totalItems = items.length;
+
+    function showNextSlide() {
+        items[currentIndex].style.display = 'none'; // Oculta la imagen actual
+        currentIndex = (currentIndex + 1) % totalItems; // Avanza al siguiente
+        items[currentIndex].style.display = 'block'; // Muestra la nueva imagen
+    }
+
+    setInterval(showNextSlide, 3000); // Cambia de imagen cada 3 segundos
+</script>
+
+</body>
+</html>
